@@ -267,6 +267,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bufbuild/protobuf@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@bufbuild/protobuf@npm:1.10.0"
+  checksum: 10c0/5487b9c2e63846d0e3bde4d025cc77ae44a22166a5d6c184df0da5581e1ab6d66dd115af0ccad814576dcd011bb1b93989fb0ac1eb4ae452979bb8b186693ba0
+  languageName: node
+  linkType: hard
+
+"@connectrpc/connect-web@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@connectrpc/connect-web@npm:1.4.0"
+  peerDependencies:
+    "@bufbuild/protobuf": ^1.4.2
+    "@connectrpc/connect": 1.4.0
+  checksum: 10c0/8f636ebda5b2707416c94aff72d285972e85eba15cae57eb6126b1d0da6f9dcdc7452ab3bd5d527cd987eb527e2f5cdc453ccb43098ac20ea2e2c3604c69c366
+  languageName: node
+  linkType: hard
+
+"@connectrpc/connect@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@connectrpc/connect@npm:1.4.0"
+  peerDependencies:
+    "@bufbuild/protobuf": ^1.4.2
+  checksum: 10c0/6006e4aef6908a786ffbda6f7c9c92fe0906e031e891c7ce28de9d1b8e3feb9115d924ec6fc38131a5b9936b537594b0a828711e3e0544f760c78e010eda1ea1
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -557,6 +583,35 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10c0/162b4a0b8705cd6f5c2470b851d1dc6cd228c86d2170e1769d738c1fbb69a87160901411c3c035331e9e99db72f1f1099a8b734bf1637cc32b9a5be1660e4e1e
+  languageName: node
+  linkType: hard
+
+"@openfeature/core@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@openfeature/core@npm:1.6.0"
+  checksum: 10c0/170441e5ad74aaebd05971af8b7bbea1da990902dd3dd6f1b354d4b5f27db6d1eb98b7c07203ae672f3e86b0f42929d7fd78157ca94374242d8cd92120ac02e1
+  languageName: node
+  linkType: hard
+
+"@openfeature/flagd-web-provider@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@openfeature/flagd-web-provider@npm:0.7.2"
+  dependencies:
+    "@bufbuild/protobuf": "npm:1.10.0"
+    "@connectrpc/connect": "npm:1.4.0"
+    "@connectrpc/connect-web": "npm:1.4.0"
+  peerDependencies:
+    "@openfeature/web-sdk": ^1.0.0
+  checksum: 10c0/3e2d93b4bdf85db174c41dd684b026ea3c7a04d963458f0000392bbd1e20ded3f8abf7a756b58caae961d0bffdae28fd795f516da40cfe0a859dccbe05a1bfd6
+  languageName: node
+  linkType: hard
+
+"@openfeature/web-sdk@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@openfeature/web-sdk@npm:1.4.0"
+  peerDependencies:
+    "@openfeature/core": ^1.6.0
+  checksum: 10c0/c2bfcc3cdc7c920ee219ccbba4b10250bfb295f3a9d75b60fc945a0c0950e7cc5cb23cb62fd44289b14246d7e4be5cce5d99da9cdb2fcfaa6ea1065e49c5be2f
   languageName: node
   linkType: hard
 
@@ -5109,6 +5164,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pokemon-market@workspace:."
   dependencies:
+    "@openfeature/core": "npm:^1.6.0"
+    "@openfeature/flagd-web-provider": "npm:^0.7.2"
+    "@openfeature/web-sdk": "npm:^1.4.0"
     "@opentelemetry/api": "npm:^1.8.0"
     "@sentry/babel-plugin-component-annotate": "npm:^2.16.1"
     "@sentry/nextjs": "npm:8.11.0"
